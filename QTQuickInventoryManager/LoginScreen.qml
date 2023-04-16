@@ -19,6 +19,7 @@ Rectangle {
             clip: true
             TextInput 
             {
+
                 wrapMode: TextInput.Wrap
                 leftPadding : 20
                 anchors.left: parent.center
