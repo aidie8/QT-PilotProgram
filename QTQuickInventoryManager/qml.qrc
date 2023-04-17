@@ -2,5 +2,6 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>LoginScreen.qml</file>
+        <file>FancyTextInput.qml</file>
     </qresource>
 </RCC>

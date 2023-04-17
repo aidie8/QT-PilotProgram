@@ -21,6 +21,9 @@
       <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
       <Extensions>ts</Extensions>
     </Filter>
+    <Filter Include="CustomTypes">
+      <UniqueIdentifier>{2321dfc9-83ac-42fa-9176-1347c9d9d39f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -33,6 +36,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="InventoryItem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AppMananger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -48,11 +54,19 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="LoginScreen.qml">
-      <Filter>Form Files</Filter>
-    </None>
     <None Include="main.qml">
       <Filter>Form Files</Filter>
     </None>
+    <None Include="FancyTextInput.qml">
+      <Filter>CustomTypes</Filter>
+    </None>
+    <None Include="LoginScreen.qml">
+      <Filter>Form Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="AppMananger.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
   </ItemGroup>
 </Project>

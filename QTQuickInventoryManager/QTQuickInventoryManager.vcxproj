@@ -83,14 +83,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AppMananger.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="InventoryItem.cpp" />
     <ClCompile Include="main.cpp" />
     <QtRcc Include="qml.qrc" />
+    <None Include="FancyTextInput.qml" />
     <None Include="LoginScreen.qml" />
     <None Include="main.qml" />
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="AppMananger.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="InventoryItem.h" />
     <ClInclude Include="main.h" />

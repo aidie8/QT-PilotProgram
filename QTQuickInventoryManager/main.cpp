@@ -1,6 +1,6 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-
+#include "AppMananger.h"
 int main(int argc, char *argv[])
 {
 #if defined(Q_OS_WIN)
@@ -13,6 +13,6 @@ int main(int argc, char *argv[])
     engine.load(QUrl(QStringLiteral("qrc:/main.qml")));
     if (engine.rootObjects().isEmpty())
         return -1;
-
+    AppManager managerApp = AppManager(&engine);
     return app.exec();
 }

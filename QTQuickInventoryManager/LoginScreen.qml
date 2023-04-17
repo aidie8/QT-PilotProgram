@@ -1,36 +1,37 @@
 ﻿import QtQuick 2.6
-
+import QtQuick.Controls 2.0
 Rectangle {
-    width :800  
-    height:800
-    color: "white"
+    signal login(username: string,password:string)
+    FancyTextInput
+    {
+        y:200
+        id: usernameInput
+        inputLabelText : "Username"
+        anchors.horizontalCenter:parent.horizontalCenter
+        inputplaceholderText: "Username"
+   
+    }
+    FancyTextInput
+    {
+        id: passwordInput
+        inputLabelText : "Password"
+        anchors.top: usernameInput.bottom
+        anchors.topMargin:20
+        anchors.horizontalCenter:parent.horizontalCenter
+        inputplaceholderText: "Password"
+    }
 
-     Text {
-        text: "Username"
-        color: "red"
-        font.pointSize: 30
 
-        Rectangle {
-            color: "gray"
-            width: 200
-            height: 60
-            anchors.left: parent.right
-            anchors.margins: 50
-            clip: true
-            TextInput 
-            {
 
-                wrapMode: TextInput.Wrap
-                leftPadding : 20
-                anchors.left: parent.center
-                font.pointSize: 30  
-                color: "black"
-                cursorVisible :true
-                autoScroll: false
-                width: 200
-                height: 50
-            }
-        }
+    Button 
+    {
+        id:loginButton
+        text: "Login"
+        font.pointSize:20
+        anchors.topMargin: 60
+        anchors.horizontalCenter: passwordInput.horizontalCenter
+        anchors.top: passwordInput.bottom
+        onClicked: login(usernameInput.text,passwordInput.text)
     }
     
     
