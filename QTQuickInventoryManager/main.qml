@@ -2,6 +2,8 @@ import QtQuick 2.9
 import QtQuick.Window 2.2
 
 Window {
+
+    signal login(username: string,password:string) 
     visible: true
     width: 1024 
     height: 680
@@ -10,6 +12,7 @@ Window {
 
     Loader
     {
+    objectName: "screenLoader"
     id: pageLoader
     source: "LoginScreen.qml"
     width:parent.width
@@ -24,6 +27,8 @@ Window {
         function onLogin(username,pass) 
         {
             console.log("onLoad")
+            console.log("Pass " + pass)
+            login(username,pass)
         }
     }
     

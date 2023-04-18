@@ -31,7 +31,12 @@ Rectangle {
         anchors.topMargin: 60
         anchors.horizontalCenter: passwordInput.horizontalCenter
         anchors.top: passwordInput.bottom
-        onClicked: login(usernameInput.text,passwordInput.text)
+        onClicked: 
+        function onClick() 
+        {
+            console.log("Pass " + passwordInput.inputText)
+            login(usernameInput.inputText,passwordInput.inputText)
+        }
     }
     
     

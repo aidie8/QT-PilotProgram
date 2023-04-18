@@ -3,5 +3,6 @@
         <file>main.qml</file>
         <file>LoginScreen.qml</file>
         <file>FancyTextInput.qml</file>
+        <file>TabbedViewMainWindow.qml</file>
     </qresource>
 </RCC>

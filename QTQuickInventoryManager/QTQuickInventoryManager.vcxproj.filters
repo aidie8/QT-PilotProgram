@@ -63,6 +63,9 @@
     <None Include="LoginScreen.qml">
       <Filter>Form Files</Filter>
     </None>
+    <None Include="TabbedViewMainWindow.qml">
+      <Filter>Form Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="AppMananger.h">

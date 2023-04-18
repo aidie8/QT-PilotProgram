@@ -4,6 +4,7 @@ Rectangle {
 
     property alias inputLabelText: inputLabel.text
     property alias inputplaceholderText: textInputBox.placeholderText
+    property alias inputText: textInputBox.text
 
     implicitHeight: 60  // < This
     implicitWidth: 300

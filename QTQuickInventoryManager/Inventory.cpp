@@ -6,7 +6,7 @@ void Inventory()
 
 }
 
-void Inventory::connect(QString username, QString password)
+void Inventory::connect(const QString username, const QString password)
 {
 
 	db = QSqlDatabase::addDatabase("QODBC");
@@ -16,6 +16,7 @@ void Inventory::connect(QString username, QString password)
 		
 
 	qDebug() << "Test";
+	qDebug() << db.password();
 
 	if (!db.open())
 	{
