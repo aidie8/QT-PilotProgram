@@ -87,6 +87,10 @@
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="InventoryItem.cpp" />
     <ClCompile Include="main.cpp" />
+    <None Include="InventoryOverview.qml" />
+    <None Include="NewOrderScreen.qml" />
+    <None Include="StatisticsScreen.qml" />
+    <None Include="SummaryScreen.qml" />
     <None Include="TabbedViewMainWindow.qml" />
     <QtRcc Include="qml.qrc" />
     <None Include="FancyTextInput.qml" />

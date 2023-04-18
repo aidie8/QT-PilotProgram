@@ -4,9 +4,7 @@
 
 void AppManager::onLogin(QString username, QString pass)
 {
-	qDebug() << "TESTTEOUJKSHDKJIHFJKIHHIUSADHIUHSADUI";
-	qDebug() << pass;
-	qDebug() << username;
+
 	QObject *screenLoader = engine->rootObjects().first()->findChild<QObject*>("screenLoader");
 	qDebug() << screenLoader;
 	if (screenLoader)

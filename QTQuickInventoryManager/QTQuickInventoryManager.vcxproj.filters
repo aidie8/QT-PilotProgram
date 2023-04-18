@@ -66,6 +66,18 @@
     <None Include="TabbedViewMainWindow.qml">
       <Filter>Form Files</Filter>
     </None>
+    <None Include="NewOrderScreen.qml">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="SummaryScreen.qml">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="StatisticsScreen.qml">
+      <Filter>Form Files</Filter>
+    </None>
+    <None Include="InventoryOverview.qml">
+      <Filter>Form Files</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="AppMananger.h">

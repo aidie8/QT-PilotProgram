@@ -4,5 +4,9 @@
         <file>LoginScreen.qml</file>
         <file>FancyTextInput.qml</file>
         <file>TabbedViewMainWindow.qml</file>
+        <file>InventoryOverview.qml</file>
+        <file>NewOrderScreen.qml</file>
+        <file>StatisticsScreen.qml</file>
+        <file>SummaryScreen.qml</file>
     </qresource>
 </RCC>

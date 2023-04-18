@@ -18,6 +18,7 @@ Window {
     width:parent.width
     height:parent.height
     
+    
     }
 
     Connections 
@@ -30,6 +31,7 @@ Window {
             console.log("Pass " + pass)
             login(username,pass)
         }
+        ignoreUnknownSignals : true
     }
     
    
