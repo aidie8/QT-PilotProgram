@@ -41,6 +41,9 @@
     <ClCompile Include="AppMananger.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="NewOrderScreen.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Inventory.h">
@@ -81,6 +84,9 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="AppMananger.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="NewOrderScreen.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

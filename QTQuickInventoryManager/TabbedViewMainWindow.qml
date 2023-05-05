@@ -1,34 +1,56 @@
 ﻿import QtQuick 2.3
-import QtQuick.Controls 2.0
+import QtQuick.Controls 2.6
 import QtQuick.Layouts
 
 Rectangle{
+    id: tabbedView
     anchors.fill: parent
+
     TabBar
     {
+
+        onCurrentIndexChanged: 
+        {
+        
+        if(currentIndex == 0)
+        {
+        console.log("Summary Loaded")
+        }
+        if(currentIndex == 1)
+        {
+        console.log("Statistics Loaded")
+        }
+        if (currentIndex == 2) {
+            newOrderScreen.Load()
+            console.log("New Order Screen Loaded")
+        }
+        if(currentIndex == 3)
+        {
+        console.log("Inventory Screen Loaded")
+        }
+
+        }
+        width: parent.width
         id:bar
         TabButton
         {
             text: "Summary"
-            width: 400
             font.pointSize: 25
         }
         TabButton
         {
             text: "Statistics"
-            width: 400
             font.pointSize: 25
         }
         TabButton
         {
             text: "New Order"
-            width: 400
+            
             font.pointSize: 25
         }
         TabButton
         {
             text: "Inventory"
-            width: 400
             font.pointSize: 25
         }
 

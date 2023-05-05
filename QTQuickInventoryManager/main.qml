@@ -27,8 +27,6 @@ Window {
         target: pageLoader.item  
         function onLogin(username,pass) 
         {
-            console.log("onLoad")
-            console.log("Pass " + pass)
             login(username,pass)
         }
         ignoreUnknownSignals : true
