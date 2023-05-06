@@ -2,6 +2,7 @@ package com.inventorymanagmentsystemjavafx.UI;
 
 import com.inventorymanagmentsystemjavafx.ApplicationController;
 import com.inventorymanagmentsystemjavafx.Backend.InventoryItem;
+import com.inventorymanagmentsystemjavafx.UI.Controllers.NewOrderScreenController;
 import javafx.beans.InvalidationListener;
 import javafx.beans.Observable;
 import javafx.beans.property.IntegerProperty;
@@ -11,6 +12,7 @@ import javafx.collections.MapChangeListener;
 import javafx.collections.ObservableList;
 import javafx.collections.ObservableMap;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseButton;
@@ -35,9 +37,13 @@ public class NewOrderScreen implements Screen {
 
 
     ObservableList<InventoryItem> inventoryStockItems;
+
+
+    NewOrderScreenController controller;
     public NewOrderScreen()
     {
 
+        controller = new NewOrderScreenController(this);
         pane = new GridPane();
         inventoryListView = new ListView<>();
         inventoryStockItems = FXCollections.observableArrayList();
@@ -81,9 +87,16 @@ public class NewOrderScreen implements Screen {
         pane.getRowConstraints().add(listRow);
         pane.getRowConstraints().add(new RowConstraints(50));
 
+        Button confirmOrderButton = new Button();
+        pane.add(confirmOrderButton,4,2);
+        confirmOrderButton.setOnMouseClicked(e -> {
+            if(controller.ConfirmOrder())
+            {
+                itemOrderList.clear();
+
+            }
+        });
         inventoryListView.setCellFactory(new Callback<>() {
-
-
             @Override
             public ListCell<InventoryItem> call(ListView<InventoryItem> param) {
                 final ListCell<InventoryItem> cell = new ListCell<>() {
@@ -168,8 +181,12 @@ public class NewOrderScreen implements Screen {
     }
 
 
+    public ObservableList<OrderListItem> getItemOrderList()
+    {
+        return itemOrderList;
+    }
 
-    private static class OrderListItem implements Observable {
+    public static class OrderListItem {
         private final InventoryItem item;
         private final IntegerProperty count = new SimpleIntegerProperty();
 
@@ -199,18 +216,10 @@ public class NewOrderScreen implements Screen {
             return item;
         }
 
-
-
-        @Override
-        public void addListener(InvalidationListener listener) {
-
+        public int getCount()
+        {
+            return count.get();
         }
-
-        @Override
-        public void removeListener(InvalidationListener listener) {
-
-        }
-
 
     }
 }

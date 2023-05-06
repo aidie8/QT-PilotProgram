@@ -54,6 +54,7 @@ public class DatabaseManager {
 
             }
 
+
         }catch (SQLException e)
         {
             System.out.println(e.getMessage());
@@ -66,5 +67,20 @@ public class DatabaseManager {
     {
         return conn;
 
+    }
+
+
+    public boolean sendInsertQuery(String statement)
+    {
+        try (Statement stmt = conn.createStatement())
+        {
+            int rowsAffected = stmt.executeUpdate(statement);
+            return rowsAffected > 0;
+
+    }catch (SQLException e)
+        {
+            System.out.println(e.getMessage());
+            return false;
+        }
     }
 }

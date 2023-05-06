@@ -47,7 +47,8 @@ public class ApplicationController extends Application {
     public void Login(String username, String password)
     {
 
-        if(manager.Connect(username,password)){
+        if(manager.Connect(username,password))
+        {
             baseScene.setRoot(mainScreen.getPane());
             manager.loadInventory();
         }
@@ -61,4 +62,7 @@ public class ApplicationController extends Application {
         return manager;
 
     }
+
+
+
 }
